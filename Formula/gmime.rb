@@ -15,7 +15,7 @@ class Gmime < Formula
   def install
     args = %w[
       --enable-largefile
-      --disable-vala
+      --disable-vanilla
       --disable-glibtest
       --enable-crypto
       --enable-introspection

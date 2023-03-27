@@ -8,6 +8,7 @@ class Gmime < Formula
 
   depends_on "gobject-introspection" => :build
   depends_on "pkg-config" => :build
+  depends_on "gtk-doc" => :build
   depends_on "glib"
   depends_on "gpgme"
 
@@ -20,7 +21,7 @@ class Gmime < Formula
       --enable-introspection
     ]
 
-    system "./configure", *std_configure_args, *args
+    system "./autogen.sh", *std_configure_args, *args
     system "make", "install"
   end
 
